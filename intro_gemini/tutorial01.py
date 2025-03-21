@@ -5,12 +5,16 @@ from google import genai
 # create a client
 client = genai.Client(api_key=get_key())
 while True:
-    question = input('[User]: ')
-    if question == 'exit' or 'quit':
+    try:
+        question = input('[User]: ')
+        if question == 'exit' or question == 'quit':
+            break
+        # generate a response
+        response = client.models.generate_content(
+            model='gemini-2.0-flash',
+            contents=[question]
+        )
+        print('[GenAI]:', response.text)
+    except Exception as e:
+        print(e)
         break
-    # generate a response
-    response = client.models.generate_content(
-        model='gemini-2.0-flash',
-        contents=[question]
-    )
-    print('[GenAI]:', response.text)
