@@ -134,3 +134,15 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore python 
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore MacOS hidden files
+.DS_Store
+
+# Ignore keys.txt (store your API keys here)
+keys.txt
