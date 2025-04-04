@@ -18,21 +18,21 @@ class ImageGeneratorApp:
         self.client = genai.Client(api_key=get_key())
         
         # Create main frame
-        main_frame = ttk.Frame(root)
-        main_frame.pack(padx=20, pady=20)
+        my_frame = ttk.Frame(root)
+        my_frame.pack(padx=20, pady=20)
         
         # Create and pack widgets
-        self.prompt_label = ttk.Label(main_frame, text="Enter your prompt:")
+        self.prompt_label = ttk.Label(my_frame, text="Enter your prompt:")
         self.prompt_label.pack(pady=5)
         
-        self.prompt_entry = ttk.Entry(main_frame, width=50)
+        self.prompt_entry = ttk.Entry(my_frame, width=50)
         self.prompt_entry.pack(pady=5)
         
-        self.generate_btn = ttk.Button(main_frame, text="Generate Image", command=self.generate_image)
+        self.generate_btn = ttk.Button(my_frame, text="Generate Image", command=self.generate_image)
         self.generate_btn.pack(pady=5)
         
         # Create fixed size frame for image
-        self.image_frame = ttk.Frame(main_frame, width=512, height=512)
+        self.image_frame = ttk.Frame(my_frame, width=512, height=512)
         self.image_frame.pack_propagate(False)
         self.image_frame.pack(pady=10)
         
@@ -82,6 +82,7 @@ class ImageGeneratorApp:
         self.root.after(100, process_image)
 
 if __name__ == "__main__":
+    # Create the main window
     root = tk.Tk()
     app = ImageGeneratorApp(root)
     root.mainloop()
