@@ -1,4 +1,4 @@
-from utils import get_key
+from intro_gemini.utils import get_key
 from google import genai
 from google.genai import types
 

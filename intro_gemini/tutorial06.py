@@ -1,7 +1,7 @@
 from google import genai
 from PyPDF2 import PdfReader, errors as pypdf_errors
 import os
-from utils import get_key
+from intro_gemini.utils import get_key
 import sys
 from google.genai.types import GenerateContentConfig
 

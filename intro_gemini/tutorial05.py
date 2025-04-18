@@ -5,7 +5,7 @@ from io import BytesIO
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk
-from utils import get_key
+from intro_gemini.utils import get_key
 from tkinter import messagebox
 
 class ImageGeneratorApp:

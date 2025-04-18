@@ -1,5 +1,5 @@
 from google import genai
-from utils import get_key
+from intro_gemini.utils import get_key
 import sys
 
 def initialize_client():

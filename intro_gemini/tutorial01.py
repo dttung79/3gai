@@ -1,4 +1,4 @@
-from utils import get_key
+from intro_gemini.utils import get_key
 # Simple example of using the GenAI client
 # AI has no memory, so it will not remember the context of the conversation
 from google import genai
