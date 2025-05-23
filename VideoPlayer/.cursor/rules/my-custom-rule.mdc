@@ -1,0 +1,72 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Workflow and Documentation Rules for AI Assistant
+
+## **I. CORE PRINCIPLE:**
+Accuracy and synchronization between `prd.md` (Product Requirements Document) and `progress.md` (Progress Tracking) are paramount. These documents, located in the project root, must always reflect the true state of the project.
+
+## **II. PRE-TASK PROCEDURE (Applies to ALL tasks):**
+1.  **Mandatory `prd.md` Review:**
+    * **Action:** Before initiating *any* coding task, file modification, feature development, feature alteration, or bug fix:
+        1.  Access and thoroughly read the `prd.md` file located in the project root.
+        2.  Ensure full understanding of the overall product goals, specific feature requirements, and any constraints relevant to the upcoming task.
+    * **Purpose:** To ensure all actions are aligned with the defined product vision and specifications.
+
+## **III. POST-TASK PROCEDURE (Applies to ALL tasks):**
+1.  **Mandatory `progress.md` Update:**
+    * **Action:** Immediately upon completion of *any* task (e.g., code generation, refactoring, bug fix, documentation update):
+        1.  Access the `progress.md` file in the project root.
+        2.  Identify the feature ID(s) related to the completed task.
+        3.  Update the 'Status' column for these ID(s) (e.g., to 'Completed', 'Partially Completed', 'Testing').
+        4.  If the task resolved or created new dependencies, update the 'Dependencies' column accordingly.
+        5.  Save changes to `progress.md`.
+    * **Purpose:** To maintain an accurate and real-time record of project progress.
+## **IV. SPECIAL PROCEDURE: FEATURE ADDITION OR SIGNIFICANT MODIFICATION:**
+This procedure is *in addition* to the general POST-TASK PROCEDURE.
+
+1.  **Trigger Conditions:** This special procedure applies if the completed task involved:
+    * Implementing a *new* feature.
+    * Significantly altering an *existing* feature in a way that changes its scope, core functionality, user interaction, or underlying requirements as previously defined in `prd.md`.
+
+2.  **Mandatory `prd.md` Update:**
+    * **Action (New Feature):**
+        1.  Access `prd.md`.
+        2.  Add a new section or entry for the new feature. This must include:
+            * A unique Feature ID (align with `progress.md`).
+            * Detailed description of the feature.
+            * User stories or use cases.
+            * Acceptance criteria.
+            * Any dependencies on other features.
+        3.  Ensure the new content is formatted consistently with the rest of `prd.md`.
+        4.  Save changes to `prd.md`.
+    * **Action (Existing Feature Modification):**
+        1.  Access `prd.md`.
+        2.  Locate the section describing the modified feature.
+        3.  Update all relevant details (description, scope, requirements, user stories, acceptance criteria) to accurately reflect the changes implemented.
+        4.  Clearly note or version the changes if appropriate for the project's documentation style.
+        5.  Save changes to `prd.md`.
+    * **Purpose:** To ensure `prd.md` remains the single source of truth for what the product does and how its features are defined.
+
+3.  **Mandatory `progress.md` Update (related to Feature Addition/Modification):**
+    * **Action (New Feature):**
+        1.  Access `progress.md`.
+        2.  Add a new row for the new feature, including its:
+            * Unique ID (consistent with `prd.md`).
+            * Feature Name.
+            * Initial 'Status' (e.g., 'Completed' if fully done, 'Pending Further Testing').
+            * Relevant 'Dependencies'.
+        3.  Save changes to `progress.md`.
+    * **Action (Existing Feature Modification):**
+        * Ensure the general post-task update to `progress.md` (Section III) for this feature reflects its new state accurately. If the modification impacts other features' dependencies, update those as well.
+    * **Purpose:** To link PRD changes directly to progress tracking.
+
+## **V. GENERAL DIRECTIVES:**
+* **Clarity:** When updating documents, use clear, concise, and unambiguous language.
+* **Consistency:** Maintain consistent formatting and terminology across both documents and within the codebase.
+* **Proactive Communication:** If any requirements in `prd.md` are unclear, ambiguous, or conflicting before starting a task, seek clarification from the user. If a task reveals that `prd.md` is outdated or incorrect, notify the user immediately to discuss updates.
+
+---
+**End of Workflow Rules**
