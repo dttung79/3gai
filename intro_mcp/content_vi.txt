@@ -1,0 +1,17 @@
+TÓM TẮT NỘI DUNG FILE CONTENT.TXT
+
+File này giới thiệu về Model Context Protocol (MCP) và hướng dẫn xây dựng Text2SQL Agent:
+
+MCP LÀ GÌ:
+- MCP là một giao thức cho phép các mô hình ngôn ngữ lớn (LLM) và các dịch vụ tính toán khác (gọi là "servers") tương tác trong một môi trường chung
+- Giúp tạo ra các AI agent mạnh mẽ bằng cách điều phối cách thức giao tiếp giữa các công cụ, nguồn dữ liệu và mô hình khác nhau
+- Trừu tượng hóa các chi tiết kỹ thuật phức tạp và cung cấp phương pháp tích hợp đơn giản dựa trên server
+
+ỨNG DỤNG THỰC TẾ:
+- Hướng dẫn xây dựng Text2SQL Agent sử dụng mcp-agent repository
+- Agent này có thể:
+  - Nhận đầu vào là câu truy vấn bằng ngôn ngữ tự nhiên
+  - Tự động tạo câu lệnh SQL
+  - Thực thi truy vấn trên cơ sở dữ liệu Postgres
+  - Trả về kết quả tóm tắt
+- Có thể linh hoạt thay đổi các công nghệ nền tảng (OpenAI, Anthropic, v.v.) nhờ kiến trúc server-based của MCP
